@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/provide_buffers.dir/provide_buffers.c.o  -o provide_buffers  -luring 

@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/eventfd.dir/eventfd.c.o  -o eventfd  -luring -lpthread 

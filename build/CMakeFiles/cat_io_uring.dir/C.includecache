@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jiangwenlong/Desktop/biyesheji/loti-examples/cat_io_uring.c
+stdio.h
+-
+stdlib.h
+-
+sys/stat.h
+-
+sys/ioctl.h
+-
+sys/syscall.h
+-
+sys/mman.h
+-
+sys/uio.h
+-
+linux/fs.h
+-
+fcntl.h
+-
+unistd.h
+-
+string.h
+-
+linux/io_uring.h
+-
+

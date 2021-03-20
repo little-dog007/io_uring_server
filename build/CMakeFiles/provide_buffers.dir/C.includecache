@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jiangwenlong/Desktop/biyesheji/loti-examples/provide_buffers.c
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+fcntl.h
+-
+string.h
+-
+liburing.h
+-
+

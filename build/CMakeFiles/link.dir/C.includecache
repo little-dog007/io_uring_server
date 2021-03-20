@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jiangwenlong/Desktop/biyesheji/loti-examples/link.c
+stdio.h
+-
+string.h
+-
+fcntl.h
+-
+liburing.h
+/home/jiangwenlong/Desktop/biyesheji/loti-examples/liburing.h
+

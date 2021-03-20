@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jiangwenlong/Desktop/biyesheji/loti-examples/sq_poll.c
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+fcntl.h
+-
+liburing.h
+-
+string.h
+-
+
