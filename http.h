@@ -6,7 +6,7 @@
 #ifndef HTTP_H
 #define HTTP_H
 
-#define SERVER_STRING           "io_uring server\r\n"
+#define SERVER_STRING           "Server: io_uring server\r\n"
 #define DEFAULT_SERVER_PORT     8000
 #define QUEUE_DEPTH             256
 #define READ_SZ                 8192
@@ -148,6 +148,7 @@ void _send_static_string_content(struct io_uring*ring,const char *str, int clien
     req->client_socket = client_socket;
     req->iov[0].iov_base = zh_malloc(slen);
     req->iov[0].iov_len = slen;
+    req->cur_file_pos = 0;
     memcpy(req->iov[0].iov_base, str, slen);
     add_write_request(ring,req);
 }
@@ -278,6 +279,8 @@ void send_headers(const char *path, off_t len, struct iovec *iov) {
         strcpy(send_buffer, "Content-Type: text/plain\r\n");
     if(strcmp("zip",file_ext) == 0){
         strcpy(send_buffer,"Content-Type: application/zip\r\n");
+        // strcpy(send_buffer,"Content-Type: application/octet-stream\r\n");
+        
     }
     slen = strlen(send_buffer);
     iov[2].iov_base = zh_malloc(slen);

@@ -29,8 +29,8 @@ void handle_get_method(struct io_uring *ring,char *path, int client_socket) {
         strcpy(final_path, "public");
         strcat(final_path, path);
     }
-    strcpy(final_path,"plugin_module-debug.zip");
-    printf("path :%s\n",final_path);
+    // strcpy(final_path,"plugin_module-debug.zip");
+    // printf("path :%s\n",final_path);
 
 
    
@@ -59,6 +59,7 @@ void handle_get_method(struct io_uring *ring,char *path, int client_socket) {
 
 void handle_http_method(struct io_uring *ring,char *method_buffer, int client_socket) {
     char *method, *path, *saveptr;
+    printf("request :%s\n",method);
 
     method = strtok_r(method_buffer, " ", &saveptr);
     strtolower(method);
