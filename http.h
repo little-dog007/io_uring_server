@@ -106,19 +106,19 @@ int setup_listening_socket(int port) {
 
 int add_accept_request(struct io_uring*ring, int server_socket, struct sockaddr_in *client_addr,
                        socklen_t *client_addr_len) {
-    struct io_uring_sqe *sqe = io_uring_get_sqe(&ring);
+    struct io_uring_sqe *sqe = io_uring_get_sqe(ring);
     io_uring_prep_accept(sqe, server_socket, (struct sockaddr *) client_addr,
                          client_addr_len, 0);
     struct request *req = malloc(sizeof(*req));
     req->event_type = EVENT_TYPE_ACCEPT;
     io_uring_sqe_set_data(sqe, req);
-    io_uring_submit(&ring);
+    io_uring_submit(ring);
 
     return 0;
 }
 
 int add_read_request(struct io_uring*ring,int client_socket) {
-    struct io_uring_sqe *sqe = io_uring_get_sqe(&ring);
+    struct io_uring_sqe *sqe = io_uring_get_sqe(ring);
     struct request *req = malloc(sizeof(*req) + sizeof(struct iovec));
     req->iov[0].iov_base = malloc(READ_SZ);
     req->iov[0].iov_len = READ_SZ;
@@ -128,16 +128,16 @@ int add_read_request(struct io_uring*ring,int client_socket) {
     /* Linux kernel 5.5 has support for readv, but not for recv() or read() */
     io_uring_prep_readv(sqe, client_socket, &req->iov[0], 1, 0);
     io_uring_sqe_set_data(sqe, req);
-    io_uring_submit(&ring);
+    io_uring_submit(ring);
     return 0;
 }
 
 int add_write_request(struct io_uring*ring,struct request *req) {
-    struct io_uring_sqe *sqe = io_uring_get_sqe(&ring);
+    struct io_uring_sqe *sqe = io_uring_get_sqe(ring);
     req->event_type = EVENT_TYPE_WRITE;
     io_uring_prep_writev(sqe, req->client_socket, req->iov, req->iovec_count, 0);
     io_uring_sqe_set_data(sqe, req);
-    io_uring_submit(&ring);
+    io_uring_submit(ring);
     return 0;
 }
 
@@ -197,11 +197,17 @@ void copy_file_contents(char *file_path, off_t file_size, struct iovec *iov,stru
     iov->iov_base = buf;
     iov->iov_len = file_size;
     
+    printf("file buff %p ,end buff %p\n",buf,buf+file_size);
 }
 
 bool check_copy_complete(struct io_uring * uring,struct request *req,int ret,int socket){
     struct iovec * iov = &req->iov[req->iovec_count-1];
     int cur_size = req->cur_file_pos;
+
+    printf("ret: %d, cur_size:%d \n",ret,cur_size);
+    char *p = iov->iov_base;
+    printf("file buff %p ,end buff %p\n",p,p+iov->iov_len);
+
    
     if(ret + cur_size<req->file_size){
         struct request *req_ = malloc(sizeof(*req_) + sizeof(struct iovec));
@@ -211,11 +217,12 @@ bool check_copy_complete(struct io_uring * uring,struct request *req,int ret,int
         req_->client_socket = socket;
         req_->iovec_count = 1;
 
-        req_->iov[0].iov_base = iov->iov_base + req_->cur_file_pos;
+        req_->iov[0].iov_base = (char*)req_->file_buff+ req_->cur_file_pos;
         req_->iov[0].iov_len = req_->file_size - req_->cur_file_pos;
-  
+
         sleep(1);
         
+      
         
         add_write_request(uring,req_);
         return false;

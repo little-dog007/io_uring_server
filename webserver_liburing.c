@@ -136,7 +136,7 @@ void server_loop(struct io_uring*ring,int server_socket) {
             }
         }
         /* Mark this request as processed */
-        io_uring_cqe_seen(&ring, cqe);
+        io_uring_cqe_seen(ring, cqe);
     }
 }
 
