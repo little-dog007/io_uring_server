@@ -44,24 +44,16 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jiangwenlong/Desktop/biyesheji/loti-examples
+CMAKE_SOURCE_DIR = /home/jiangwenlong/Desktop/biyesheji/io_uring_server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jiangwenlong/Desktop/biyesheji/loti-examples/build
+CMAKE_BINARY_DIR = /home/jiangwenlong/Desktop/biyesheji/io_uring_server/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/webserver_liburing.dir/all
-all: CMakeFiles/cat_io_uring.dir/all
-all: CMakeFiles/eventfd.dir/all
-all: CMakeFiles/sq_poll.dir/all
-all: CMakeFiles/cat_liburing.dir/all
-all: CMakeFiles/fixed_buffers.dir/all
-all: CMakeFiles/link.dir/all
-all: CMakeFiles/provide_buffers.dir/all
-all: CMakeFiles/probe.dir/all
 
 .PHONY : all
 
@@ -72,14 +64,6 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/webserver_liburing.dir/clean
-clean: CMakeFiles/cat_io_uring.dir/clean
-clean: CMakeFiles/eventfd.dir/clean
-clean: CMakeFiles/sq_poll.dir/clean
-clean: CMakeFiles/cat_liburing.dir/clean
-clean: CMakeFiles/fixed_buffers.dir/clean
-clean: CMakeFiles/link.dir/clean
-clean: CMakeFiles/provide_buffers.dir/clean
-clean: CMakeFiles/probe.dir/clean
 
 .PHONY : clean
 
@@ -90,14 +74,14 @@ clean: CMakeFiles/probe.dir/clean
 CMakeFiles/webserver_liburing.dir/all:
 	$(MAKE) -f CMakeFiles/webserver_liburing.dir/build.make CMakeFiles/webserver_liburing.dir/depend
 	$(MAKE) -f CMakeFiles/webserver_liburing.dir/build.make CMakeFiles/webserver_liburing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles --progress-num=17,18 "Built target webserver_liburing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jiangwenlong/Desktop/biyesheji/io_uring_server/build/CMakeFiles --progress-num=1,2 "Built target webserver_liburing"
 .PHONY : CMakeFiles/webserver_liburing.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/webserver_liburing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/io_uring_server/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/webserver_liburing.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/io_uring_server/build/CMakeFiles 0
 .PHONY : CMakeFiles/webserver_liburing.dir/rule
 
 # Convenience name for target.
@@ -109,222 +93,6 @@ webserver_liburing: CMakeFiles/webserver_liburing.dir/rule
 CMakeFiles/webserver_liburing.dir/clean:
 	$(MAKE) -f CMakeFiles/webserver_liburing.dir/build.make CMakeFiles/webserver_liburing.dir/clean
 .PHONY : CMakeFiles/webserver_liburing.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/cat_io_uring.dir
-
-# All Build rule for target.
-CMakeFiles/cat_io_uring.dir/all:
-	$(MAKE) -f CMakeFiles/cat_io_uring.dir/build.make CMakeFiles/cat_io_uring.dir/depend
-	$(MAKE) -f CMakeFiles/cat_io_uring.dir/build.make CMakeFiles/cat_io_uring.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles --progress-num=1,2 "Built target cat_io_uring"
-.PHONY : CMakeFiles/cat_io_uring.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/cat_io_uring.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cat_io_uring.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 0
-.PHONY : CMakeFiles/cat_io_uring.dir/rule
-
-# Convenience name for target.
-cat_io_uring: CMakeFiles/cat_io_uring.dir/rule
-
-.PHONY : cat_io_uring
-
-# clean rule for target.
-CMakeFiles/cat_io_uring.dir/clean:
-	$(MAKE) -f CMakeFiles/cat_io_uring.dir/build.make CMakeFiles/cat_io_uring.dir/clean
-.PHONY : CMakeFiles/cat_io_uring.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/eventfd.dir
-
-# All Build rule for target.
-CMakeFiles/eventfd.dir/all:
-	$(MAKE) -f CMakeFiles/eventfd.dir/build.make CMakeFiles/eventfd.dir/depend
-	$(MAKE) -f CMakeFiles/eventfd.dir/build.make CMakeFiles/eventfd.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles --progress-num=5,6 "Built target eventfd"
-.PHONY : CMakeFiles/eventfd.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/eventfd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/eventfd.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 0
-.PHONY : CMakeFiles/eventfd.dir/rule
-
-# Convenience name for target.
-eventfd: CMakeFiles/eventfd.dir/rule
-
-.PHONY : eventfd
-
-# clean rule for target.
-CMakeFiles/eventfd.dir/clean:
-	$(MAKE) -f CMakeFiles/eventfd.dir/build.make CMakeFiles/eventfd.dir/clean
-.PHONY : CMakeFiles/eventfd.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/sq_poll.dir
-
-# All Build rule for target.
-CMakeFiles/sq_poll.dir/all:
-	$(MAKE) -f CMakeFiles/sq_poll.dir/build.make CMakeFiles/sq_poll.dir/depend
-	$(MAKE) -f CMakeFiles/sq_poll.dir/build.make CMakeFiles/sq_poll.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles --progress-num=15,16 "Built target sq_poll"
-.PHONY : CMakeFiles/sq_poll.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/sq_poll.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sq_poll.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 0
-.PHONY : CMakeFiles/sq_poll.dir/rule
-
-# Convenience name for target.
-sq_poll: CMakeFiles/sq_poll.dir/rule
-
-.PHONY : sq_poll
-
-# clean rule for target.
-CMakeFiles/sq_poll.dir/clean:
-	$(MAKE) -f CMakeFiles/sq_poll.dir/build.make CMakeFiles/sq_poll.dir/clean
-.PHONY : CMakeFiles/sq_poll.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/cat_liburing.dir
-
-# All Build rule for target.
-CMakeFiles/cat_liburing.dir/all:
-	$(MAKE) -f CMakeFiles/cat_liburing.dir/build.make CMakeFiles/cat_liburing.dir/depend
-	$(MAKE) -f CMakeFiles/cat_liburing.dir/build.make CMakeFiles/cat_liburing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles --progress-num=3,4 "Built target cat_liburing"
-.PHONY : CMakeFiles/cat_liburing.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/cat_liburing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cat_liburing.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 0
-.PHONY : CMakeFiles/cat_liburing.dir/rule
-
-# Convenience name for target.
-cat_liburing: CMakeFiles/cat_liburing.dir/rule
-
-.PHONY : cat_liburing
-
-# clean rule for target.
-CMakeFiles/cat_liburing.dir/clean:
-	$(MAKE) -f CMakeFiles/cat_liburing.dir/build.make CMakeFiles/cat_liburing.dir/clean
-.PHONY : CMakeFiles/cat_liburing.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/fixed_buffers.dir
-
-# All Build rule for target.
-CMakeFiles/fixed_buffers.dir/all:
-	$(MAKE) -f CMakeFiles/fixed_buffers.dir/build.make CMakeFiles/fixed_buffers.dir/depend
-	$(MAKE) -f CMakeFiles/fixed_buffers.dir/build.make CMakeFiles/fixed_buffers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles --progress-num=7,8 "Built target fixed_buffers"
-.PHONY : CMakeFiles/fixed_buffers.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/fixed_buffers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fixed_buffers.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 0
-.PHONY : CMakeFiles/fixed_buffers.dir/rule
-
-# Convenience name for target.
-fixed_buffers: CMakeFiles/fixed_buffers.dir/rule
-
-.PHONY : fixed_buffers
-
-# clean rule for target.
-CMakeFiles/fixed_buffers.dir/clean:
-	$(MAKE) -f CMakeFiles/fixed_buffers.dir/build.make CMakeFiles/fixed_buffers.dir/clean
-.PHONY : CMakeFiles/fixed_buffers.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/link.dir
-
-# All Build rule for target.
-CMakeFiles/link.dir/all:
-	$(MAKE) -f CMakeFiles/link.dir/build.make CMakeFiles/link.dir/depend
-	$(MAKE) -f CMakeFiles/link.dir/build.make CMakeFiles/link.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles --progress-num=9,10 "Built target link"
-.PHONY : CMakeFiles/link.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/link.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/link.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 0
-.PHONY : CMakeFiles/link.dir/rule
-
-# Convenience name for target.
-link: CMakeFiles/link.dir/rule
-
-.PHONY : link
-
-# clean rule for target.
-CMakeFiles/link.dir/clean:
-	$(MAKE) -f CMakeFiles/link.dir/build.make CMakeFiles/link.dir/clean
-.PHONY : CMakeFiles/link.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/provide_buffers.dir
-
-# All Build rule for target.
-CMakeFiles/provide_buffers.dir/all:
-	$(MAKE) -f CMakeFiles/provide_buffers.dir/build.make CMakeFiles/provide_buffers.dir/depend
-	$(MAKE) -f CMakeFiles/provide_buffers.dir/build.make CMakeFiles/provide_buffers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles --progress-num=13,14 "Built target provide_buffers"
-.PHONY : CMakeFiles/provide_buffers.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/provide_buffers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/provide_buffers.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 0
-.PHONY : CMakeFiles/provide_buffers.dir/rule
-
-# Convenience name for target.
-provide_buffers: CMakeFiles/provide_buffers.dir/rule
-
-.PHONY : provide_buffers
-
-# clean rule for target.
-CMakeFiles/provide_buffers.dir/clean:
-	$(MAKE) -f CMakeFiles/provide_buffers.dir/build.make CMakeFiles/provide_buffers.dir/clean
-.PHONY : CMakeFiles/provide_buffers.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/probe.dir
-
-# All Build rule for target.
-CMakeFiles/probe.dir/all:
-	$(MAKE) -f CMakeFiles/probe.dir/build.make CMakeFiles/probe.dir/depend
-	$(MAKE) -f CMakeFiles/probe.dir/build.make CMakeFiles/probe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles --progress-num=11,12 "Built target probe"
-.PHONY : CMakeFiles/probe.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/probe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/probe.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 0
-.PHONY : CMakeFiles/probe.dir/rule
-
-# Convenience name for target.
-probe: CMakeFiles/probe.dir/rule
-
-.PHONY : probe
-
-# clean rule for target.
-CMakeFiles/probe.dir/clean:
-	$(MAKE) -f CMakeFiles/probe.dir/build.make CMakeFiles/probe.dir/clean
-.PHONY : CMakeFiles/probe.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

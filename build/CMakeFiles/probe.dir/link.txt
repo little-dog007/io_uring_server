@@ -1,1 +1,0 @@
-/usr/bin/cc    CMakeFiles/probe.dir/probe.c.o  -o probe  -luring 

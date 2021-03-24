@@ -96,12 +96,4 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/webserver_liburing.dir/DependInfo.cmake"
-  "CMakeFiles/cat_io_uring.dir/DependInfo.cmake"
-  "CMakeFiles/eventfd.dir/DependInfo.cmake"
-  "CMakeFiles/sq_poll.dir/DependInfo.cmake"
-  "CMakeFiles/cat_liburing.dir/DependInfo.cmake"
-  "CMakeFiles/fixed_buffers.dir/DependInfo.cmake"
-  "CMakeFiles/link.dir/DependInfo.cmake"
-  "CMakeFiles/provide_buffers.dir/DependInfo.cmake"
-  "CMakeFiles/probe.dir/DependInfo.cmake"
   )

@@ -1,1 +1,0 @@
-/usr/bin/cc    CMakeFiles/fixed_buffers.dir/fixed_buffers.c.o  -o fixed_buffers  -luring 

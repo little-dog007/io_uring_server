@@ -1,1 +1,0 @@
-/usr/bin/cc    CMakeFiles/link.dir/link.c.o  -o link  -luring 

@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jiangwenlong/Desktop/biyesheji/loti-examples
+CMAKE_SOURCE_DIR = /home/jiangwenlong/Desktop/biyesheji/io_uring_server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jiangwenlong/Desktop/biyesheji/loti-examples/build
+CMAKE_BINARY_DIR = /home/jiangwenlong/Desktop/biyesheji/io_uring_server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -78,11 +67,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/io_uring_server/build/CMakeFiles /home/jiangwenlong/Desktop/biyesheji/io_uring_server/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiangwenlong/Desktop/biyesheji/io_uring_server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,326 +123,6 @@ webserver_liburing/fast:
 	$(MAKE) -f CMakeFiles/webserver_liburing.dir/build.make CMakeFiles/webserver_liburing.dir/build
 .PHONY : webserver_liburing/fast
 
-#=============================================================================
-# Target rules for targets named cat_io_uring
-
-# Build rule for target.
-cat_io_uring: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cat_io_uring
-.PHONY : cat_io_uring
-
-# fast build rule for target.
-cat_io_uring/fast:
-	$(MAKE) -f CMakeFiles/cat_io_uring.dir/build.make CMakeFiles/cat_io_uring.dir/build
-.PHONY : cat_io_uring/fast
-
-#=============================================================================
-# Target rules for targets named eventfd
-
-# Build rule for target.
-eventfd: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 eventfd
-.PHONY : eventfd
-
-# fast build rule for target.
-eventfd/fast:
-	$(MAKE) -f CMakeFiles/eventfd.dir/build.make CMakeFiles/eventfd.dir/build
-.PHONY : eventfd/fast
-
-#=============================================================================
-# Target rules for targets named sq_poll
-
-# Build rule for target.
-sq_poll: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sq_poll
-.PHONY : sq_poll
-
-# fast build rule for target.
-sq_poll/fast:
-	$(MAKE) -f CMakeFiles/sq_poll.dir/build.make CMakeFiles/sq_poll.dir/build
-.PHONY : sq_poll/fast
-
-#=============================================================================
-# Target rules for targets named cat_liburing
-
-# Build rule for target.
-cat_liburing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cat_liburing
-.PHONY : cat_liburing
-
-# fast build rule for target.
-cat_liburing/fast:
-	$(MAKE) -f CMakeFiles/cat_liburing.dir/build.make CMakeFiles/cat_liburing.dir/build
-.PHONY : cat_liburing/fast
-
-#=============================================================================
-# Target rules for targets named fixed_buffers
-
-# Build rule for target.
-fixed_buffers: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fixed_buffers
-.PHONY : fixed_buffers
-
-# fast build rule for target.
-fixed_buffers/fast:
-	$(MAKE) -f CMakeFiles/fixed_buffers.dir/build.make CMakeFiles/fixed_buffers.dir/build
-.PHONY : fixed_buffers/fast
-
-#=============================================================================
-# Target rules for targets named link
-
-# Build rule for target.
-link: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 link
-.PHONY : link
-
-# fast build rule for target.
-link/fast:
-	$(MAKE) -f CMakeFiles/link.dir/build.make CMakeFiles/link.dir/build
-.PHONY : link/fast
-
-#=============================================================================
-# Target rules for targets named provide_buffers
-
-# Build rule for target.
-provide_buffers: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 provide_buffers
-.PHONY : provide_buffers
-
-# fast build rule for target.
-provide_buffers/fast:
-	$(MAKE) -f CMakeFiles/provide_buffers.dir/build.make CMakeFiles/provide_buffers.dir/build
-.PHONY : provide_buffers/fast
-
-#=============================================================================
-# Target rules for targets named probe
-
-# Build rule for target.
-probe: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 probe
-.PHONY : probe
-
-# fast build rule for target.
-probe/fast:
-	$(MAKE) -f CMakeFiles/probe.dir/build.make CMakeFiles/probe.dir/build
-.PHONY : probe/fast
-
-cat_io_uring.o: cat_io_uring.c.o
-
-.PHONY : cat_io_uring.o
-
-# target to build an object file
-cat_io_uring.c.o:
-	$(MAKE) -f CMakeFiles/cat_io_uring.dir/build.make CMakeFiles/cat_io_uring.dir/cat_io_uring.c.o
-.PHONY : cat_io_uring.c.o
-
-cat_io_uring.i: cat_io_uring.c.i
-
-.PHONY : cat_io_uring.i
-
-# target to preprocess a source file
-cat_io_uring.c.i:
-	$(MAKE) -f CMakeFiles/cat_io_uring.dir/build.make CMakeFiles/cat_io_uring.dir/cat_io_uring.c.i
-.PHONY : cat_io_uring.c.i
-
-cat_io_uring.s: cat_io_uring.c.s
-
-.PHONY : cat_io_uring.s
-
-# target to generate assembly for a file
-cat_io_uring.c.s:
-	$(MAKE) -f CMakeFiles/cat_io_uring.dir/build.make CMakeFiles/cat_io_uring.dir/cat_io_uring.c.s
-.PHONY : cat_io_uring.c.s
-
-cat_liburing.o: cat_liburing.c.o
-
-.PHONY : cat_liburing.o
-
-# target to build an object file
-cat_liburing.c.o:
-	$(MAKE) -f CMakeFiles/cat_liburing.dir/build.make CMakeFiles/cat_liburing.dir/cat_liburing.c.o
-.PHONY : cat_liburing.c.o
-
-cat_liburing.i: cat_liburing.c.i
-
-.PHONY : cat_liburing.i
-
-# target to preprocess a source file
-cat_liburing.c.i:
-	$(MAKE) -f CMakeFiles/cat_liburing.dir/build.make CMakeFiles/cat_liburing.dir/cat_liburing.c.i
-.PHONY : cat_liburing.c.i
-
-cat_liburing.s: cat_liburing.c.s
-
-.PHONY : cat_liburing.s
-
-# target to generate assembly for a file
-cat_liburing.c.s:
-	$(MAKE) -f CMakeFiles/cat_liburing.dir/build.make CMakeFiles/cat_liburing.dir/cat_liburing.c.s
-.PHONY : cat_liburing.c.s
-
-eventfd.o: eventfd.c.o
-
-.PHONY : eventfd.o
-
-# target to build an object file
-eventfd.c.o:
-	$(MAKE) -f CMakeFiles/eventfd.dir/build.make CMakeFiles/eventfd.dir/eventfd.c.o
-.PHONY : eventfd.c.o
-
-eventfd.i: eventfd.c.i
-
-.PHONY : eventfd.i
-
-# target to preprocess a source file
-eventfd.c.i:
-	$(MAKE) -f CMakeFiles/eventfd.dir/build.make CMakeFiles/eventfd.dir/eventfd.c.i
-.PHONY : eventfd.c.i
-
-eventfd.s: eventfd.c.s
-
-.PHONY : eventfd.s
-
-# target to generate assembly for a file
-eventfd.c.s:
-	$(MAKE) -f CMakeFiles/eventfd.dir/build.make CMakeFiles/eventfd.dir/eventfd.c.s
-.PHONY : eventfd.c.s
-
-fixed_buffers.o: fixed_buffers.c.o
-
-.PHONY : fixed_buffers.o
-
-# target to build an object file
-fixed_buffers.c.o:
-	$(MAKE) -f CMakeFiles/fixed_buffers.dir/build.make CMakeFiles/fixed_buffers.dir/fixed_buffers.c.o
-.PHONY : fixed_buffers.c.o
-
-fixed_buffers.i: fixed_buffers.c.i
-
-.PHONY : fixed_buffers.i
-
-# target to preprocess a source file
-fixed_buffers.c.i:
-	$(MAKE) -f CMakeFiles/fixed_buffers.dir/build.make CMakeFiles/fixed_buffers.dir/fixed_buffers.c.i
-.PHONY : fixed_buffers.c.i
-
-fixed_buffers.s: fixed_buffers.c.s
-
-.PHONY : fixed_buffers.s
-
-# target to generate assembly for a file
-fixed_buffers.c.s:
-	$(MAKE) -f CMakeFiles/fixed_buffers.dir/build.make CMakeFiles/fixed_buffers.dir/fixed_buffers.c.s
-.PHONY : fixed_buffers.c.s
-
-link.o: link.c.o
-
-.PHONY : link.o
-
-# target to build an object file
-link.c.o:
-	$(MAKE) -f CMakeFiles/link.dir/build.make CMakeFiles/link.dir/link.c.o
-.PHONY : link.c.o
-
-link.i: link.c.i
-
-.PHONY : link.i
-
-# target to preprocess a source file
-link.c.i:
-	$(MAKE) -f CMakeFiles/link.dir/build.make CMakeFiles/link.dir/link.c.i
-.PHONY : link.c.i
-
-link.s: link.c.s
-
-.PHONY : link.s
-
-# target to generate assembly for a file
-link.c.s:
-	$(MAKE) -f CMakeFiles/link.dir/build.make CMakeFiles/link.dir/link.c.s
-.PHONY : link.c.s
-
-probe.o: probe.c.o
-
-.PHONY : probe.o
-
-# target to build an object file
-probe.c.o:
-	$(MAKE) -f CMakeFiles/probe.dir/build.make CMakeFiles/probe.dir/probe.c.o
-.PHONY : probe.c.o
-
-probe.i: probe.c.i
-
-.PHONY : probe.i
-
-# target to preprocess a source file
-probe.c.i:
-	$(MAKE) -f CMakeFiles/probe.dir/build.make CMakeFiles/probe.dir/probe.c.i
-.PHONY : probe.c.i
-
-probe.s: probe.c.s
-
-.PHONY : probe.s
-
-# target to generate assembly for a file
-probe.c.s:
-	$(MAKE) -f CMakeFiles/probe.dir/build.make CMakeFiles/probe.dir/probe.c.s
-.PHONY : probe.c.s
-
-provide_buffers.o: provide_buffers.c.o
-
-.PHONY : provide_buffers.o
-
-# target to build an object file
-provide_buffers.c.o:
-	$(MAKE) -f CMakeFiles/provide_buffers.dir/build.make CMakeFiles/provide_buffers.dir/provide_buffers.c.o
-.PHONY : provide_buffers.c.o
-
-provide_buffers.i: provide_buffers.c.i
-
-.PHONY : provide_buffers.i
-
-# target to preprocess a source file
-provide_buffers.c.i:
-	$(MAKE) -f CMakeFiles/provide_buffers.dir/build.make CMakeFiles/provide_buffers.dir/provide_buffers.c.i
-.PHONY : provide_buffers.c.i
-
-provide_buffers.s: provide_buffers.c.s
-
-.PHONY : provide_buffers.s
-
-# target to generate assembly for a file
-provide_buffers.c.s:
-	$(MAKE) -f CMakeFiles/provide_buffers.dir/build.make CMakeFiles/provide_buffers.dir/provide_buffers.c.s
-.PHONY : provide_buffers.c.s
-
-sq_poll.o: sq_poll.c.o
-
-.PHONY : sq_poll.o
-
-# target to build an object file
-sq_poll.c.o:
-	$(MAKE) -f CMakeFiles/sq_poll.dir/build.make CMakeFiles/sq_poll.dir/sq_poll.c.o
-.PHONY : sq_poll.c.o
-
-sq_poll.i: sq_poll.c.i
-
-.PHONY : sq_poll.i
-
-# target to preprocess a source file
-sq_poll.c.i:
-	$(MAKE) -f CMakeFiles/sq_poll.dir/build.make CMakeFiles/sq_poll.dir/sq_poll.c.i
-.PHONY : sq_poll.c.i
-
-sq_poll.s: sq_poll.c.s
-
-.PHONY : sq_poll.s
-
-# target to generate assembly for a file
-sq_poll.c.s:
-	$(MAKE) -f CMakeFiles/sq_poll.dir/build.make CMakeFiles/sq_poll.dir/sq_poll.c.s
-.PHONY : sq_poll.c.s
-
 webserver_liburing.o: webserver_liburing.c.o
 
 .PHONY : webserver_liburing.o
@@ -476,41 +156,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... webserver_liburing"
-	@echo "... cat_io_uring"
-	@echo "... eventfd"
-	@echo "... sq_poll"
-	@echo "... cat_liburing"
-	@echo "... fixed_buffers"
-	@echo "... rebuild_cache"
-	@echo "... link"
-	@echo "... provide_buffers"
-	@echo "... probe"
-	@echo "... cat_io_uring.o"
-	@echo "... cat_io_uring.i"
-	@echo "... cat_io_uring.s"
-	@echo "... cat_liburing.o"
-	@echo "... cat_liburing.i"
-	@echo "... cat_liburing.s"
-	@echo "... eventfd.o"
-	@echo "... eventfd.i"
-	@echo "... eventfd.s"
-	@echo "... fixed_buffers.o"
-	@echo "... fixed_buffers.i"
-	@echo "... fixed_buffers.s"
-	@echo "... link.o"
-	@echo "... link.i"
-	@echo "... link.s"
-	@echo "... probe.o"
-	@echo "... probe.i"
-	@echo "... probe.s"
-	@echo "... provide_buffers.o"
-	@echo "... provide_buffers.i"
-	@echo "... provide_buffers.s"
-	@echo "... sq_poll.o"
-	@echo "... sq_poll.i"
-	@echo "... sq_poll.s"
 	@echo "... webserver_liburing.o"
 	@echo "... webserver_liburing.i"
 	@echo "... webserver_liburing.s"

@@ -1,1 +1,0 @@
-/usr/bin/cc    CMakeFiles/cat_liburing.dir/cat_liburing.c.o  -o cat_liburing  -luring 

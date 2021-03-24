@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/jiangwenlong/Desktop/biyesheji/loti-examples/webserver_liburing.c" "/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/webserver_liburing.dir/webserver_liburing.c.o"
+  "/home/jiangwenlong/Desktop/biyesheji/io_uring_server/webserver_liburing.c" "/home/jiangwenlong/Desktop/biyesheji/io_uring_server/build/CMakeFiles/webserver_liburing.dir/webserver_liburing.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

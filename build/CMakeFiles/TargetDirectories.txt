@@ -1,11 +1,3 @@
-/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/edit_cache.dir
-/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/webserver_liburing.dir
-/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/cat_io_uring.dir
-/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/eventfd.dir
-/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/sq_poll.dir
-/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/cat_liburing.dir
-/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/fixed_buffers.dir
-/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/rebuild_cache.dir
-/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/link.dir
-/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/provide_buffers.dir
-/home/jiangwenlong/Desktop/biyesheji/loti-examples/build/CMakeFiles/probe.dir
+/home/jiangwenlong/Desktop/biyesheji/io_uring_server/build/CMakeFiles/rebuild_cache.dir
+/home/jiangwenlong/Desktop/biyesheji/io_uring_server/build/CMakeFiles/edit_cache.dir
+/home/jiangwenlong/Desktop/biyesheji/io_uring_server/build/CMakeFiles/webserver_liburing.dir
